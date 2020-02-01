@@ -3,12 +3,11 @@ import java.util.ArrayList;
 public class Flight {
 
     private ArrayList<Passenger> passengers;
-    private Plane plane;
+    Plane plane;
     private String flightNumber;
     private String destination;
     private String depAirport;
     private String depTime;
-    private int numberOfEmptySeats;
 
 
     public Flight(Plane plane, String flightNumber, String destination, String depAirport, String depTime) {
@@ -18,7 +17,6 @@ public class Flight {
         this.destination = destination;
         this.depAirport = depAirport;
         this.depTime = depTime;
-        this.numberOfEmptySeats = plane.getTotalNumberOfSeats();
     }
 
     public String getFlightNumber(){

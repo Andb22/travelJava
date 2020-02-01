@@ -1,4 +1,3 @@
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 public class Plane {
 
@@ -15,5 +14,10 @@ public class Plane {
 
     public int getTotalNumberOfSeats() {
         return this.plane.getCapacity();
+    }
+
+    public int getBaggageWeightPerPassenger() {
+        int baggage = Math.round((this.plane.getWeight()/2) / this.plane.getCapacity());
+    return baggage;
     }
 }
