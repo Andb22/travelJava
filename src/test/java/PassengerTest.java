@@ -9,9 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class PassengerTest {
 
     private Passenger passenger;
-    private String name;
-    private int bagQuantity;
-   // private Flight flight;
+    // private Flight flight;
     private int seatNumber;
 
     @Before
