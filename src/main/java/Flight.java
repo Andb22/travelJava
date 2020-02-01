@@ -30,13 +30,12 @@ public class Flight {
     }
 
     public void bookPassenger(Passenger passenger){
-        if (this.numberOfEmptySeats > 1) {
+        if (this.getPassengerListSize() < this.plane.getTotalNumberOfSeats()) {
             this.passengers.add(passenger);
         }
     }
 
     public int getQuantityEmptySeats() {
-        numberOfEmptySeats = this.plane.getTotalNumberOfSeats() - this.passengers.size();
-        return numberOfEmptySeats;
+      return  (this.plane.getTotalNumberOfSeats() - this.passengers.size());
     }
 }

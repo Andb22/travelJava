@@ -3,7 +3,8 @@ public enum PlaneType {
     BOEING747(420000, 416),
     AIRBUSA380(560000, 853),
     BOEING777(300000, 368),
-    BOEING737(80000, 215);
+    BOEING737(80000, 215),
+    CESSNATTX( 1500, 2);
 
     private final int weight;
     private final int seatCapacity;
