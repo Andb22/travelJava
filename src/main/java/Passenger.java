@@ -22,7 +22,7 @@ public class Passenger {
 
     public void addFlight(Flight flight){
         flight1 = flight;
-        seatNumber = (int)Math.random() * ((1 - flight.plane.getTotalNumberOfSeats()));
+        seatNumber = (int)(Math.random() * (1 + flight.plane.getTotalNumberOfSeats()));
     }
 
     public Flight getFlight(){
