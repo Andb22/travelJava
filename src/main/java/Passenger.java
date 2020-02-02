@@ -1,7 +1,11 @@
+import java.util.Random;
+
 public class Passenger {
 
     private String name;
     private int bagQuantity;
+    private Flight flight1;
+    private int seatNumber;
 
     public Passenger(String name, int bagQuantity) {
         this.name = name;
@@ -16,5 +20,17 @@ public class Passenger {
         return this.bagQuantity;
     }
 
+    public void addFlight(Flight flight){
+        flight1 = flight;
+        seatNumber = (int)Math.random() * ((1 - flight.plane.getTotalNumberOfSeats()));
+    }
+
+    public Flight getFlight(){
+        return this.flight1;
+    }
+
+    public int getSeatNumber(){
+        return this.seatNumber;
+    }
 
 }

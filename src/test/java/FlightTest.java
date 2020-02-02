@@ -1,6 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
@@ -15,8 +18,8 @@ public class FlightTest {
     public void before() {
         plane1 = new Plane(PlaneType.BOEING747);
         plane2 = new Plane(PlaneType.CESSNATTX);
-        flight1 = new Flight(plane1, "FR100", "Vancouver", "Glasgow", "2100");
-        flight2 = new Flight(plane2, "FR101", "Paris", "Glasgow", "1300");
+        flight1 = new Flight(plane1, "FR100", "Vancouver", "Glasgow",  "2020-03-29 21:00:00");
+        flight2 = new Flight(plane2, "FR101", "Paris", "Glasgow", "2020-03-29 13:00:00");
         passenger = new Passenger("Andrew", 1);
     }
 
@@ -51,6 +54,16 @@ public class FlightTest {
         flight2.bookPassenger(passenger);
         flight2.bookPassenger(passenger);
     assertEquals(2, flight2.getPassengerListSize());
+    }
+
+    @Test
+    public void canConvertStringToDate(){
+        assertEquals(2020, flight1.calendar.get(Calendar.YEAR));
+    }
+
+    @Test
+    public void canGetFlightTime(){
+        assertEquals(9, flight1.calendar.get(Calendar.HOUR));
     }
 
 
