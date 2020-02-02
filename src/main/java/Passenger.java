@@ -12,5 +12,9 @@ public class Passenger {
         return this.name;
     }
 
+    public int getBagQuantity(){
+        return this.bagQuantity;
+    }
+
 
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Flight {
 
-    private ArrayList<Passenger> passengers;
+    ArrayList<Passenger> passengers;
     Plane plane;
     private String flightNumber;
     private String destination;
