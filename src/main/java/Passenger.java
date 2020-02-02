@@ -23,6 +23,11 @@ public class Passenger {
     public void addFlight(Flight flight){
         flight1 = flight;
         seatNumber = (int)(Math.random() * (1 + flight.plane.getTotalNumberOfSeats()));
+//        for(Passenger passenger : flight.passengers)
+//            if (this.seatNumber == passenger.seatNumber) {
+//                this.addFlight(flight);
+//            }
+//        return seatNumber;
     }
 
     public Flight getFlight(){

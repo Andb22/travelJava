@@ -1,6 +1,4 @@
 
-import sun.util.calendar.Gregorian;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -44,6 +42,7 @@ public class Flight {
         }
     }
 
+
     public int getQuantityEmptySeats() {
         return  (this.plane.getTotalNumberOfSeats() - this.passengers.size());
     }
@@ -57,7 +56,6 @@ public class Flight {
     } catch (ParseException e) {
         e.printStackTrace();
     }
-        System.out.println(date);
         calendar = new GregorianCalendar();
         calendar.setTime(date);
     }

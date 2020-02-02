@@ -14,6 +14,6 @@ public class PlaneTest {
 
         @Test
         public void hasWeight(){
-            assertEquals(412769, plane.getWeightFromEnum());
+            assertEquals(420000, plane.getWeightFromEnum());
         }
 }

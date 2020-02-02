@@ -14,7 +14,7 @@ public class FlightManagerTest {
         public void before(){
         passenger = new Passenger("Kate", 2);
         plane = new Plane(PlaneType.BOEING747);
-        flight = new Flight(plane, "FR100", "Vancouver", "Glasgow", "2100");
+        flight = new Flight(plane, "FR100", "Vancouver", "Glasgow", "2020-03-29 13:00:00");
         flightManager = new FlightManager(flight);
 }
     @Test
